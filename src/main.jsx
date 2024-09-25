@@ -1,10 +1,31 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import './App.css'
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import Customers from "./components/Customers";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const Home = () => (
+  <div>
+  <h1 className='header'>Welcome to DogCare!</h1>
+  <Link to="/customers" className='customer-link' >
+    Check out our Customers
+   </Link>
+   </div>
+);
+
+function main() {
+  
+
+  return (
+    <>
+      
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route 
+            exact path="/customers" element={<Customers />} />
+        </Routes>
+      </Router>
+    </>
+  )
+}
+
+export default main
