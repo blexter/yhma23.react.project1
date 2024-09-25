@@ -15,17 +15,21 @@ function main() {
   
 
   return (
-    <>
+    <div>
+    <h1 className='header'>Welcome to DogCare!</h1>
+    <Link to="/Customers">Go to customers</Link>
+    </div>
+    // <>
       
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route 
-            exact path="/customers" element={<Customers />} />
-        </Routes>
-      </Router>
-    </>
-  )
+    //   <Router>
+    //     <Routes>
+    //       <Route exact path="/" element={<Home />} />
+    //       <Route 
+    //         exact path="/customers" element={<Customers />} />
+    //     </Routes>
+    //   </Router>
+    // </>
+  );
 }
 
 export default main
