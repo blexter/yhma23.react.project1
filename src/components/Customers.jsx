@@ -24,7 +24,7 @@ function Popup({ customer, onClose }) {
 }
 
 function Customers() {
-  const url = "https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758"
+  const url = "https://api.jsonbin.io/v3/b/6718eb66acd3cb34a89bbcc6"
   const [customers, setCustomers] = useState([]);
   const [selectedCustomer, setSelectedCustomer] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
